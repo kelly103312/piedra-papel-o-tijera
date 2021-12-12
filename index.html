@@ -23,8 +23,17 @@
 
     <div class="point-container">
         <div class="point-board">
-            <div id="puntaje-usuario" class="user-point"> Puntaje del usuario</div>
-            <div id="puntaje-pc" class="pc-point"> Puntaje de la maquina</div>
+            <div id="puntaje-usuario" class="user"> 
+                <span>Puntaje del usuario</span>
+                <span id="user-point">0</span>
+
+            </div>
+
+            <div id="puntaje-pc" class="pc">
+                 Puntaje de la maquina
+                 <span id="pc-point">0</span>
+
+            </div>
         </div>
         
     </div>
@@ -40,9 +49,11 @@
         </div>
     </div>
 
-    <button id="Restaurar" class="restart-btn">Reiniciar juego</button>
+    <button id="restaurar" class="restart-btn">Reiniciar juego</button>
 
+    <script src="juego.js"></script>
 
 </body>
+
 
 </html>
