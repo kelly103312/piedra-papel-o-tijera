@@ -6,9 +6,13 @@
     --md: 18px;
     --lg: 32px;
 }
+body{
+    margin: 30px;
+}
 .container-superior{
   display:flex;
   justify-content: space-between;
+  margin-bottom: 30px;
   
 }
 .titulo{
@@ -19,11 +23,15 @@
 .img-bandera img,.img-logo img{
    width: 48px;
 }
+.container-central{
+    margin-top: 10%; 
+
+}
 .point-container{
     display: flex;
     justify-content: center;
     width: 100%;
-    margin: 4px;         
+    margin-bottom: 32px;      
 }
 .point-board{
     display: flex;
@@ -41,12 +49,20 @@
     align-items: center;
     justify-content: center;
     height: 200px;
-  
+    width: 100%;
+    
+    margin-bottom: 32px; 
 }
 
 .choice-user img{
     width: 164px;
     margin: 8px;
+}
+.btn-restaurar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
 }
 .restart-btn{
     border: none;
