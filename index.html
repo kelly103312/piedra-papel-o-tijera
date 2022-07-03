@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
     <title>Juego piedra, papel o tijera</title>
 </head>
 
 <body>
     <section class="container-superior">
         <div id="logo" class="img-logo">
-            <img src="assets/logo.svg" alt="logo">
+            <a href="https://github.com/kelly103312" target="_blank"><img src="assets/github.svg" alt="logo" title="Código fuente"></a> 
         </div>
         <h1 class="titulo">Juego de piedra papel o tijera</h1>
         <div id="bandera" class="img-bandera">
@@ -20,43 +20,50 @@
         </div>
 
     </section>
+
    <div class="container-central"> 
-    <div class="point-container">
-        <div class="point-board">
-            <div id="puntaje-usuario" class="user"> 
-                <span>Puntaje del usuario</span>
-                <span id="user-point">0</span>
-
+        <div class="point-container">
+            <div class="point-board">
+                <div id="puntaje-usuario" class="information"> 
+                    <span>Información de usuario</span>
+                    <span>Puntaje del usuario</span>
+                    <strong><span id="user-point">0</span></strong>
+                    <span>Elección del usuario: </span>
+                    <span id="eleccion_user">-</span>
+            
+                </div>
+            
             </div>
-
-            <div id="puntaje-pc" class="pc">
-                <span id="pc-point">0</span>
-                 Puntaje de la maquina
-                 
-
+            <div class="point-board">
+                <div id="puntaje-pc" class="information">
+                    <span>Información de la maquina</span>
+                    <span>Puntaje de la maquina</span>
+                    <strong><span id="pc-point">0</span></strong>
+                    <span>Elección de la maquina: </span>
+                    <span id="eleccion_pc">-</span>     
+                </div>
+            </div>
+            
+        </div>
+        <div class="choice-user">
+            <div id="tijeras" class="choice">
+                <img src="assets/elecciones/opcion2/tijeras.svg" alt="tijeras" title="Tijeras">
+            </div>
+            <div id="papel" class="choice">
+                <img src="assets/elecciones/opcion2/papel.svg" alt="papel" title="Papel">
+            </div>
+            <div id="piedra" class="choice">
+                <img src="assets/elecciones/opcion2/roca.svg" alt="piedra" title="Piedra">
             </div>
         </div>
-        
-    </div>
-    <div class="choice-user">
-        <div id="tijeras" class="choice">
-            <img src="assets/elecciones/tijeras.svg" alt="tijeras">
+        <div class="btn-restaurar">
+                <button id="restaurar" class="restart-btn">Reiniciar juego</button>
         </div>
-        <div id="papel" class="choice">
-            <img src="assets/elecciones/papel.svg" alt="papel">
-        </div>
-        <div id="piedra" class="choice">
-            <img src="assets/elecciones/piedra.svg" alt="piedra">
-        </div>
-    </div>
-   <div class="btn-restaurar">
-    <button id="restaurar" class="restart-btn">Reiniciar juego</button>
-   </div>
     
     </div>
     
 
-    <script src="juego.js"></script>
+    <script src="assets/js/juego.js"></script>
 
 </body>
 
