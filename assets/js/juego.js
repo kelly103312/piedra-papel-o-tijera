@@ -1,5 +1,6 @@
 var user_point=0;
 var pc_point=0;
+
 var elemento_user= document.querySelector('#user-point');
 var elemento_pc= document.querySelector('#pc-point');
 var eleccion_user= document.querySelector('#eleccion_user');
@@ -9,8 +10,6 @@ var papel=document.querySelector('#papel');
 var tijeras=document.querySelector('#tijeras');
 var piedra=document.querySelector('#piedra');
 
-var restaurar=document.querySelector('#restaurar');
-
 function pcEleccion(){
     const choices = ['piedra', 'papel', 'tijeras'];
     const randomNumber = Math.floor(Math.random() * 3);
@@ -18,14 +17,14 @@ function pcEleccion(){
 }
 
 function lose(){
-    alert('Perdio');
+    alert('Has perdido esta ronda');
     pc_pointt();
 }
 function empate(){
-    alert('Empate');
+    alert('Ha habido empate');
 }
 function win(){
-    alert('Ganaste');
+    alert('Has ganado esta ronda');
     user_pointt();
 }
 
@@ -46,26 +45,28 @@ function juego(eleccion){
     var pc_eleccion=pcEleccion();
     eleccion_pc.innerHTML = pc_eleccion;
 
+    //Captura de la selección del usuario y de la maquina, concatena y según la elección realiza una acción
    switch(pc_eleccion + eleccion){
       case 'piedrapiedra':
       case 'papelpapel':
       case 'tijerastijeras':
-          empate();
-        break;
+            empate();
+            break;
       case 'piedrapapel':
       case 'papeltijeras':
       case 'tijeraspiedra': 
-         win();
-        break;
+            win();
+            break;
       case 'piedratijeras':
       case 'papelpiedra':
       case 'tijeraspapel':
-          lose();
-          break;
+            lose();
+            break;
    }
 }
 
 function reiniciar_juego(){
+    //Se reinicia el marcador del juego
     var res = confirm("Está seguro de reiniar el juego?");
     if(res){
         user_point=0;
@@ -82,6 +83,7 @@ function reiniciar_juego(){
 }
 
 function main() {
+    //Captura de la selección del usuario
     piedra.addEventListener('click', function() {
        juego('piedra');
     });
@@ -94,7 +96,7 @@ function main() {
         juego('tijeras');
       
     });
-    restaurar.addEventListener('click',function(){
+    document.querySelector('#restaurar').addEventListener('click',function(){
        reiniciar_juego();
     });
 }
